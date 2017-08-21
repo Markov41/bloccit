@@ -16,6 +16,19 @@ posts = Post.all
         body: RandomData.random_paragraph
     )
 end
+
+ Asspost = Post.find_or_create_by!(
+    title: 'AssignmentTitle',
+    body: 'AssignmentBody'
+)
+
+Comment.find_or_create_by!(
+    post: Asspost,
+    body: 'Assignment Comment Body'
+)
+    
+    
+    
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
