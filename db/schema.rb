@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20170831170811) do
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "topic_id"
   end
 
   create_table "topics", force: :cascade do |t|

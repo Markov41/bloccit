@@ -29,9 +29,10 @@ end
 
 10.times do
     SponsoredPost.create!(
+        topic: topics.sample,
         title: RandomData.random_sentence,
         body: RandomData.random_paragraph,
-        price: rand(1..5)
+        price: 100
     )
 end
 puts "Seed finished"
